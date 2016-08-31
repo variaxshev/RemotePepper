@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<title>Pepper Remote</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="libs/qimessaging/1.0/qimessaging.js"></script>
+<script type="text/javascript" src="libs/qimessaging/1.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/control.js"></script>
+<script type="text/javascript" src="js/pikachu.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/newStyle.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<p><span>接続</span></p>
+	<div class = "row connectedState">
+		<div class="connected col-xs-9" style="color:red; font-size: 15pt;"><span class="connectedText">未接続</span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+	</div>
+	<div class = "row">
+		<div class="col-xs-12"><label style="color: #4C4C4C; font-size: 17pt;">Pepper's IP Address</label></div>
+		<div class="col-xs-9"><input type="text" class="form-control input__input" id="pepperIP" value="192.168.0.1" /></div>
+		<div class="col-xs-2"><button onclick="connect()" class="btn fixinfo">接続</button></div>
+	</div>
+	<br>
+	<p><span>音量</span></p>
+	<div class = "row">
+		<div class="col-xs-12"><label style="color: #4C4C4C; font-size: 17pt;">現在の音量</label></div>
+		<div class="col-xs-9"><input type="text" class="form-control input__input" id="pepperVolume" value="" /></div>
+		<div class="col-xs-2"><button onclick="changeAudioVolume()" class="btn fixinfo">変更</button></div>
+	</div>
+<br>
+	<p><span>喋らせる</span></p>
+
+	<div class = "row">
+		<div class="col-xs-12"><label style="color: #4C4C4C; font-size: 17pt;">喋るのみ</label></div>
+		<div class="col-xs-9" ><input type="text" class="form-control input__input" id="sayText" /></div>
+		<div class="col-xs-2" ><button onclick="say()" class="btn fixinfo">OK</button></div>
+	</div>
+
+	<div class = "row">
+		<div class="col-xs-12"><label style="color: #4C4C4C; font-size: 17pt;">動きながら喋る</label></div>
+		<div class="col-xs-9" ><input type="text" class="form-control input__input" id="animatedSayText" /></div>
+		<div class="col-xs-2" ><button onclick="animatedSay()" class="btn fixinfo">OK</button></div>
+
+	</div>
+	<label style="color: gray;">ヒント：pikachu</label>
+	<br>
+	<p><span>動かす</span></p>
+	<div class = "row">
+		<div class="col-xs-12"><button onclick="location.href='controller.html'" class="btn fixsuccess">コントローラー画面へ</button></div>	
+	</div>
+
+<br>
+	<p><span>アプリを選ぶ</span></p>
+	<div class = "row">
+		<div class="col-xs-12"><button onclick="action(0)" class="btn fixdanger">ストップ</button></div>
+	</div>
+<br>
+	<div class = "row">
+		<label style="font-size: 15pt; color: gray;">あいさつアプリ --></label>
+		<div class="col-xs-4"><a onclick="action(1)"><img src="images/ojigi_boy.png" style="height: 50%; width: 30%"></a></div>
+		<!-- <div class="col-xs-4"><button onclick="action(1)" class="btn fixsuccess">あいさつアプリ</button></div> -->
+	</div>
+<br>
+	<div class = "row">
+		<div class="col-xs-12"><button onclick="action(2)" class="btn fixsuccess">座席状況アプリ</button></div>
+	</div>
+<br>
+</div>
+
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
