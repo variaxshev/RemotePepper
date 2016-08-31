@@ -235,7 +235,7 @@ body1 {
   background-size: 100% 3px;
   background-color: rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease-out;
-  color: skyblue;
+  color: #3FB1DD;
 }
 .input__input::-webkit-input-placeholder {
   color: #d6d6d6;
