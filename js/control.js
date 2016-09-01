@@ -186,6 +186,7 @@ function action(num){
 			break;
 		case 1:
 			self.alBehavior.runBehavior("animation-5ffd19/HighTouch");
+			alert("入った！")
 			break;
 		case 2:
 			self.alBehavior.runBehavior("pepper_self_introduction_waist_sample/.");
