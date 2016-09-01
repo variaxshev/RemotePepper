@@ -185,7 +185,6 @@ function action(num){
 			self.alBehavior.stopAllBehaviors();
 			break;
 		case 1:
-			alert("入った！");
 			self.alBehavior.runBehavior("animation-5ffd19/HighTouch");
 			break;
 		case 2:
